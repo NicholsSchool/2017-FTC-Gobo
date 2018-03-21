@@ -14,6 +14,7 @@ import com.qualcomm.robotcore.util.ElapsedTime;
 @Autonomous(name="Auto Drive glyph bot", group="Iterative Opmode")
 
 public class AutonomousDrive extends LinearOpMode {
+    //intializing and instatiating the objects needed for the robot
     private ElapsedTime runtime = new ElapsedTime();
     private DcMotor leftFrontMotor = null;
     private DcMotor rightFrontMotor = null;
@@ -26,7 +27,7 @@ public class AutonomousDrive extends LinearOpMode {
 
     @Override
     public void runOpMode() {
-
+        //getting data from the hardwareMap on the robot controller
         leftFrontMotor = hardwareMap.get(DcMotor.class, "leftFrontMotor");
         rightFrontMotor = hardwareMap.get(DcMotor.class, "rightFrontMotor");
         leftBackMotor = hardwareMap.get(DcMotor.class, "leftBackMotor");
